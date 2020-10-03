@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">YOUR DATA SUCCESSFULLY SAVED............THANK YOU</h1>
+<br>
+<label>Mobile Id</label><h2 th:text="${obj.id}"></h2><br>
+<label>Mobile Name</label><h2 th:text="${obj.mobile_name}"></h2><br>
+<label>Mobile Company</label><h2 th:text="${obj.mobile_company}"></h2><br>
+<a href="welcome">WELCOME PAGE</a>
+</body>
+</html>

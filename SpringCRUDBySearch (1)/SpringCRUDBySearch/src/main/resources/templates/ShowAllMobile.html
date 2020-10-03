@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 align="center">SHOW ALL MOBILE LIST</h1>
+<table style="border: 2px solid black;width: 100%">
+<thead>
+<th>
+Id
+</th>
+<th>
+MOBILE NAME
+</th>
+<th>
+MOBILE COMPANY
+</th>
+<th>
+UPDATE
+</th>
+<th>
+DELETE
+</th>
+</thead>
+<tr th:each = "obj :${objs}" style="border: 2px solid black">
+<td th:text = "${obj.id}"></td>
+<td th:text = "${obj.mobile_name}"></td>
+<td th:text = "${obj.mobile_company}"></td>
+<td><a th:href= "@{deleteData?(id = ${obj.id})}">DELETE</a></td>
+<td><a th:href= "@{updateData?(id = ${obj.id})}">UPDATE</a></td>
+</tr> 
+</table>
+</body>
+</html>
